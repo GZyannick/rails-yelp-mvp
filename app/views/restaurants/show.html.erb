@@ -26,8 +26,13 @@
 <ul>
   <% @restaurant.reviews.each do |review|  %>
   <li>
-    <%= review.content %>      <%= review.rating %> ★
-    
+    <%= review.content %> 
+    <p>
+    <% review.rating.to_i.times do%>
+    <%= '★' %>
+    <% end %>
+    </p>
+
   </li>
   <% end %>
 </ul>
